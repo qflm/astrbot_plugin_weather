@@ -1,0 +1,7 @@
+name: astrbot_plugin_weather
+display_name: 天气查询
+desc: /天气 地点 查询今天与未来 3 天天气，数据来自 Open-Meteo，免费无需 API Key
+version: v1.0.1
+author: qflm
+repo: https://github.com/qflm/astrbot_plugin_weather
+astrbot_version: ">=4.0.0"

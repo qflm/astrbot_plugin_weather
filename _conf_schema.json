@@ -1,0 +1,72 @@
+{
+  "default_city": {
+    "description": "默认地点",
+    "type": "string",
+    "default": "",
+    "hint": "用户只发 /天气 不带地点时查询该城市；留空则提示用法"
+  },
+  "language": {
+    "description": "地名返回语言",
+    "type": "string",
+    "default": "zh",
+    "options": [
+      "zh",
+      "en"
+    ],
+    "hint": "影响地理编码返回的地点名称语言"
+  },
+  "forecast_days": {
+    "description": "未来预报天数",
+    "type": "int",
+    "default": 3,
+    "slider": {
+      "min": 0,
+      "max": 7,
+      "step": 1
+    },
+    "hint": "在今日天气下方追加未来 N 天的简要预报，0 表示不显示"
+  },
+  "cache_minutes": {
+    "description": "天气缓存时长（分钟）",
+    "type": "int",
+    "default": 10,
+    "slider": {
+      "min": 0,
+      "max": 120,
+      "step": 1
+    },
+    "hint": "同一地点在该时间内重复查询直接返回缓存，0 表示不缓存"
+  },
+  "geo_count": {
+    "description": "同名地点候选数",
+    "type": "int",
+    "default": 5,
+    "slider": {
+      "min": 1,
+      "max": 20,
+      "step": 1
+    },
+    "hint": "用于生成「也可以查」提示"
+  },
+  "show_source": {
+    "description": "显示数据来源",
+    "type": "bool",
+    "default": true
+  },
+  "show_alternatives": {
+    "description": "显示同名地点提示",
+    "type": "bool",
+    "default": true,
+    "hint": "关闭后只返回首个匹配地点，不再附「也可以查」"
+  },
+  "timeout": {
+    "description": "请求超时（秒）",
+    "type": "int",
+    "default": 10,
+    "slider": {
+      "min": 3,
+      "max": 60,
+      "step": 1
+    }
+  }
+}
